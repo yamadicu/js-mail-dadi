@@ -25,10 +25,30 @@ function conferma(){
     }
     
     if ( sold ){
-        console.log('sei già iscritto')
+        document.writeln('sei già iscritto')
     }
     else {
-        console.log('non sei iscritto al sito');
+        document.writeln('non sei iscritto al sito');
     }
 
 }
+
+
+function randomNumber(max, min){
+    return Math.floor( Math.random() * max ) + min
+}
+
+function rand(){
+    let pc = randomNumber(6 , 1)
+    let giocatore = randomNumber(6, 1 )
+
+    if( giocatore > pc ){
+        document.writeln('il giocatore ha vinto')
+    }
+    else if( pc > giocatore ){
+        document.writeln('il computer ha vinto')
+    }
+    else{
+        document.writeln('pareggio')
+    }
+}               
